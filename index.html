@@ -1,1 +1,588 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informatika SMAN 19 Pekanbaru | Belajar Kreatif & Inovatif</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-indigo-500 selection:text-white">
 
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 border-b border-slate-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-12 h-12 bg-gradient-to-tr from-indigo-600 to-violet-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-indigo-200">
+                    <i class="fa-solid fa-graduation-cap text-xl"></i>
+                </div>
+                <div>
+                    <h1 class="font-extrabold text-lg text-slate-900 leading-tight">Informatika SMAN 19</h1>
+                    <p class="text-xs font-medium text-indigo-600">Pekanbaru • Kurikulum Merdeka</p>
+                </div>
+            </div>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#beranda" class="hover:text-indigo-600 transition">Beranda</a>
+                <a href="#tentang" class="hover:text-indigo-600 transition">Tentang Mapel</a>
+                <a href="#atp" class="hover:text-indigo-600 transition font-semibold text-indigo-600">Materi ATP</a>
+                <a href="#kontak" class="hover:text-indigo-600 transition">Kontak</a>
+            </nav>
+
+            <div class="hidden md:block">
+                <a href="#atp" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium px-5 py-2.5 rounded-xl shadow-lg shadow-indigo-200 transition duration-200 text-sm">
+                    Jelajahi Materi
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <button id="menu-btn" class="md:hidden text-slate-700 focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-100 px-4 pt-2 pb-4 space-y-2">
+            <a href="#beranda" class="block py-2 text-slate-600 hover:text-indigo-600 font-medium">Beranda</a>
+            <a href="#tentang" class="block py-2 text-slate-600 hover:text-indigo-600 font-medium">Tentang Mapel</a>
+            <a href="#atp" class="block py-2 text-indigo-600 font-semibold">Materi ATP</a>
+            <a href="#kontak" class="block py-2 text-slate-600 hover:text-indigo-600 font-medium">Kontak</a>
+        </div>
+    </header>
+
+    <section id="beranda" class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-32 bg-gradient-to-b from-indigo-50/50 via-white to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <span class="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 border border-indigo-100 shadow-sm">
+                        <i class="fa-solid fa-sparkles text-indigo-500"></i> Platform Pembelajaran Resmi SMAN 19 Pekanbaru
+                    </span>
+                    <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-tight">
+                        Eksplorasi Dunia <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">Informatika</span> Masa Depan
+                    </h2>
+                    <p class="text-lg text-slate-600 max-w-2xl mx-auto lg:mx-0">
+                        Selamat datang di portal pembelajaran mata pelajaran Informatika SMAN 19 Pekanbaru. Pelajari Berpikir Komputasional, Literasi Digital, Analisis Data, hingga Algoritma & Pemrograman sesuai Kurikulum Merdeka Fase E & F.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                        <a href="#atp" class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-8 py-4 rounded-xl shadow-xl shadow-indigo-200 transition text-center flex items-center justify-center gap-2">
+                            <span>Lihat Alur Tujuan Pembelajaran</span>
+                            <i class="fa-solid fa-arrow-down text-sm"></i>
+                        </a>
+                        <a href="#tentang" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-700 font-semibold px-8 py-4 rounded-xl border border-slate-200 transition text-center">
+                            Tentang Kurikulum
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none bg-gradient-to-br from-indigo-500 to-violet-700 rounded-3xl p-8 shadow-2xl text-white">
+                        <div class="absolute -top-4 -right-4 bg-amber-400 text-slate-900 font-bold px-4 py-1.5 rounded-full text-xs shadow-lg uppercase tracking-wider">
+                            Fase E & F
+                        </div>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white">
+                                    <i class="fa-solid fa-laptop-code text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-base">Kelas X (Fase E)</h4>
+                                    <p class="text-xs text-indigo-100">Struktur Data, Von Neumann & Literasi</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white">
+                                    <i class="fa-solid fa-network-wired text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-base">Kelas XI (Fase F)</h4>
+                                    <p class="text-xs text-indigo-100">Strategi Algoritmik & Analisis Data</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 rounded-lg bg-white/10 flex items-center justify-center text-white">
+                                    <i class="fa-solid fa-code-merge text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-base">Kelas XII (Fase F)</h4>
+                                    <p class="text-xs text-indigo-100">Pemrograman Lanjut & Projek Kontekstual</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 pt-6 border-t border-white/20 flex justify-between items-center text-xs text-indigo-100">
+                            <span>SMAN 19 Pekanbaru</span>
+                            <span class="font-semibold text-white">Pusat Kurikulum & Pembelajaran</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tentang" class="py-16 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 py-1 px-3 rounded-full inline-block">Mengenai Pembelajaran</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900">Mengapa Informatika Sangat Penting?</h3>
+                <p class="text-slate-600">Mata pelajaran Informatika membekali peserta didik dengan kemampuan berpikir kritis, kreatif, dan kolaboratif dalam memanfaatkan teknologi digital serta menyelesaikan masalah kompleks.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300">
+                    <div class="w-14 h-14 bg-indigo-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-md shadow-indigo-200">
+                        <i class="fa-solid fa-brain text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Berpikir Komputasional</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Melatih otak memecahkan masalah rumit dengan merumuskan solusi secara logis, terstruktur, dan efisien lewat algoritma serta struktur data.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300">
+                    <div class="w-14 h-14 bg-violet-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-md shadow-violet-200">
+                        <i class="fa-solid fa-shield-halved text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Literasi Digital Lanjut</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Menguasai etika digital, verifikasi informasi fakta, keamanan jaringan, serta pengelolaan privasi akun di era digital modern.</p>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-xl transition duration-300">
+                    <div class="w-14 h-14 bg-emerald-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-md shadow-emerald-200">
+                        <i class="fa-solid fa-chart-line text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-slate-900 mb-2">Analisis & Pemrograman</h4>
+                    <p class="text-slate-600 text-sm leading-relaxed">Memanfaatkan sumber data terbuka untuk pengambilan keputusan serta merancang dan mengimplementasikan kode program profesional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="atp" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto space-y-4 mb-12">
+                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-600 bg-indigo-50 py-1 px-3 rounded-full inline-block">Kurikulum Merdeka</h2>
+                <h3 class="text-3xl font-extrabold text-slate-900">Alur Tujuan Pembelajaran (ATP)</h3>
+                <p class="text-slate-600">Pilih kelas di bawah untuk melihat rincian Elemen, Capaian Pembelajaran (CP), dan Tujuan Pembelajaran (TP).</p>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex justify-center mb-10">
+                <div class="inline-flex bg-slate-200/80 p-1.5 rounded-2xl shadow-inner space-x-2">
+                    <button onclick="switchTab('x')" id="btn-x" class="px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 bg-white text-indigo-600 shadow-md">
+                        Kelas X (Fase E)
+                    </button>
+                    <button onclick="switchTab('xi-xii')" id="btn-xi-xii" class="px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900">
+                        Kelas XI & XII (Fase F)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content Container Class X -->
+            <div id="content-x" class="space-y-8">
+                <div class="bg-indigo-900 text-white p-6 rounded-2xl shadow-lg flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div>
+                        <span class="bg-indigo-700 text-indigo-100 text-xs font-semibold px-3 py-1 rounded-full uppercase">Fase E</span>
+                        <h4 class="text-2xl font-bold mt-2">Alur Tujuan Pembelajaran Kelas X SMA/MA</h4>
+                        <p class="text-indigo-200 text-sm mt-1">Fokus pada fondasi berpikir komputasional, literasi digital mendasar, dan arsitektur komputer.</p>
+                    </div>
+                    <div class="bg-indigo-800/80 border border-indigo-700 px-4 py-2.5 rounded-xl text-xs text-indigo-200">
+                        <i class="fa-solid fa-info-circle mr-1 text-indigo-400"></i> Total 2 Elemen Utama
+                    </div>
+                </div>
+
+                <!-- Elemen 1: Berpikir Komputasional Kelas X -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                    <div class="bg-slate-100 px-6 py-4 border-b border-slate-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-lg bg-indigo-600 text-white font-bold flex items-center justify-center text-sm">1</span>
+                            <h5 class="font-bold text-lg text-slate-900">Elemen: Berpikir Komputasional</h5>
+                        </div>
+                        <span class="text-xs font-semibold bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full border border-indigo-100">7 Tujuan Pembelajaran</span>
+                    </div>
+                    <div class="p-6 space-y-6">
+                        <div>
+                            <h6 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Capaian Pembelajaran (CP)</h6>
+                            <p class="text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                Murid mampu memahami konsep struktur data dan algoritma standar; menerapkan proses komputasi yang dilakukan manusia secara mandiri atau berkelompok untuk mendapatkan data yang berkualitas; menerapkan algoritma dan struktur data standar untuk menghasilkan berbagai solusi dalam menyelesaikan persoalan; menuliskan solusi rancangan program sederhana dalam format pseudocode yang dekat dengan bahasa komputer; memahami model dan menyimulasikan dinamika Input-Process-Output dalam sebuah komputer Von Neumann, serta memahami peran sistem operasi.
+                            </p>
+                        </div>
+                        <div>
+                            <h6 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Daftar Tujuan Pembelajaran (TP)</h6>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs mt-0.5">1.1</span>
+                                    <p class="text-sm text-slate-700">Memahami konsep struktur data dan algoritma standar.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs mt-0.5">1.2</span>
+                                    <p class="text-sm text-slate-700">Menerapkan proses komputasi yang dilakukan manusia secara mandiri/berkelompok untuk data berkualitas.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs mt-0.5">1.3</span>
+                                    <p class="text-sm text-slate-700">Menerapkan algoritma dan struktur data standar untuk solusi penyelesaian persoalan.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs mt-0.5">1.4</span>
+                                    <p class="text-sm text-slate-700">Menuliskan solusi rancangan program sederhana dalam format pseudocode dekat dengan komputer.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs mt-0.5">1.5</span>
+                                    <p class="text-sm text-slate-700">Memahami model komputer Von Neumann.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs mt-0.5">1.6</span>
+                                    <p class="text-sm text-slate-700">Menyimulasikan dinamika Input-Process-Output dalam komputer Von Neumann.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3 md:col-span-2">
+                                    <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs mt-0.5">1.7</span>
+                                    <p class="text-sm text-slate-700">Memahami peran sistem operasi pada komputer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Elemen 2: Literasi Digital Kelas X -->
+                <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                    <div class="bg-slate-100 px-6 py-4 border-b border-slate-200 flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+                        <div class="flex items-center space-x-3">
+                            <span class="w-8 h-8 rounded-lg bg-violet-600 text-white font-bold flex items-center justify-center text-sm">2</span>
+                            <h5 class="font-bold text-lg text-slate-900">Elemen: Literasi Digital</h5>
+                        </div>
+                        <span class="text-xs font-semibold bg-violet-50 text-violet-700 px-3 py-1 rounded-full border border-violet-100">13 Tujuan Pembelajaran</span>
+                    </div>
+                    <div class="p-6 space-y-6">
+                        <div>
+                            <h6 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-1">Capaian Pembelajaran (CP)</h6>
+                            <p class="text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                Murid mampu memahami penggunaan mesin pencari dengan variabel yang lebih banyak; mengetahui ekosistem periksa fakta untuk memilah fakta dan bukan; menggunakan cara membaca lateral untuk mengevaluasi berbagai informasi digital; memahami pemanfaatan perangkat teknologi yang lebih beragam untuk pengolah dokumen, lembar kerja, dan presentasi; memahami konsep dan penerapan serta konfigurasi keamanan dasar untuk konektivitas jaringan data lokal dan internet baik kabel maupun nirkabel; memahami pemanfaatan media digital untuk produksi dan diseminasi konten, partisipasi dan kolaborasi; menghargai hak atas kekayaan intelektual, mengenal profesi bidang Informatika, memahami penerapan digitalisasi budaya Indonesia, menyaring konten negatif di dunia digital; menerapkan pengelolaan kata sandi dengan manajer kata sandi, dan menerapkan autentikasi dua langkah secara sederhana, serta menerapkan konfigurasi privasi dan keamanan pada akun platform digital.
+                            </p>
+                        </div>
+                        <div>
+                            <h6 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">Daftar Tujuan Pembelajaran (TP)</h6>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.1</span>
+                                    <p class="text-sm text-slate-700">Memahami penggunaan mesin pencari dengan variabel yang lebih banyak.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.2</span>
+                                    <p class="text-sm text-slate-700">Mengetahui ekosistem periksa fakta untuk memilah fakta dan bukan.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.3</span>
+                                    <p class="text-sm text-slate-700">Menggunakan cara membaca lateral untuk mengevaluasi berbagai informasi digital.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.4</span>
+                                    <p class="text-sm text-slate-700">Memahami pemanfaatan perangkat teknologi untuk pengolah dokumen, lembar kerja, dan presentasi.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.5</span>
+                                    <p class="text-sm text-slate-700">Memahami konsep, penerapan, & konfigurasi keamanan dasar konektivitas jaringan data lokal/internet.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.6</span>
+                                    <p class="text-sm text-slate-700">Memahami pemanfaatan media digital untuk produksi, diseminasi konten, partisipasi & kolaborasi.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.7</span>
+                                    <p class="text-sm text-slate-700">Menghargai hak atas kekayaan intelektual (HAKI).</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.8</span>
+                                    <p class="text-sm text-slate-700">Mengenal berbagai profesi di bidang Informatika.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.9</span>
+                                    <p class="text-sm text-slate-700">Memahami penerapan digitalisasi budaya Indonesia.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.10</span>
+                                    <p class="text-sm text-slate-700">Menyaring konten negatif di dunia digital.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.11</span>
+                                    <p class="text-sm text-slate-700">Menerapkan pengelolaan kata sandi dengan manajer kata sandi.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.12</span>
+                                    <p class="text-sm text-slate-700">Menerapkan autentikasi dua langkah (2FA) secara sederhana.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3 md:col-span-2">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.13</span>
+                                    <p class="text-sm text-slate-700">Menerapkan konfigurasi privasi dan keamanan pada akun platform digital.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Content Container Class XI & XII (Fase F) -->
+            <div id="content-xi-xii" class="hidden space-y-8">
+                <div class="bg-violet-900 text-white p-6 rounded-2xl shadow-lg flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div>
+                        <span class="bg-violet-700 text-violet-100 text-xs font-semibold px-3 py-1 rounded-full uppercase">Fase F</span>
+                        <h4 class="text-2xl font-bold mt-2">Alur Tujuan Pembelajaran Kelas XI & XII SMA/MA</h4>
+                        <p class="text-violet-200 text-sm mt-1">Fokus pada strategi algoritmik tingkat lanjut, analisis data mendalam, dan pemrograman kompleks.</p>
+                    </div>
+                    <div class="bg-violet-800/80 border border-violet-700 px-4 py-2.5 rounded-xl text-xs text-violet-200">
+                        <i class="fa-solid fa-info-circle mr-1 text-violet-400"></i> Kelas 11 & Kelas 12
+                    </div>
+                </div>
+
+                <!-- Kelas 11 -->
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
+                        <span class="bg-indigo-600 text-white font-bold text-sm px-3 py-1 rounded-lg">Kelas 11</span>
+                        <h5 class="font-bold text-xl text-slate-900">Materi Pembelajaran Tingkat Lanjut</h5>
+                    </div>
+
+                    <!-- Elemen 1: Berpikir Komputasional Kelas 11 -->
+                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="bg-slate-100 px-6 py-4 border-b border-slate-200 flex justify-between items-center">
+                            <h5 class="font-bold text-base text-slate-900"><i class="fa-solid fa-microchip text-indigo-600 mr-2"></i> Berpikir Komputasional (Kelas 11)</h5>
+                            <span class="text-xs font-semibold bg-indigo-50 text-indigo-700 px-3 py-1 rounded-full">5 TP</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <p class="text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                <strong>CP:</strong> Murid mampu memahami alur proses pengembangan program atau produk teknologi digital; menganalisis persoalan menghasilkan lebih dari satu solusi dengan strategi algoritmik; merancang struktur data kompleks/abstrak; serta mengenali model jaringan komputer & troubleshooting.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs mt-0.5">1.1</span>
+                                    <p class="text-sm text-slate-700">Memahami alur proses pengembangan program atau produk teknologi digital.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs mt-0.5">1.2</span>
+                                    <p class="text-sm text-slate-700">Menuliskan algoritma yang efisien, efektif, dan optimal.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs mt-0.5">1.3</span>
+                                    <p class="text-sm text-slate-700">Menganalisis persoalan untuk alternatif solusi dengan strategi algoritmik & justifikasi efisiensi.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs mt-0.5">1.4</span>
+                                    <p class="text-sm text-slate-700">Memilih & menerapkan solusi optimal dengan struktur data yang lebih kompleks dan abstrak.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3 md:col-span-2">
+                                    <span class="font-mono font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded text-xs mt-0.5">1.5</span>
+                                    <p class="text-sm text-slate-700">Mengenali model jaringan komputer, pengiriman data antar perangkat, & troubleshooting.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Elemen 2: Literasi Digital Kelas 11 -->
+                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="bg-slate-100 px-6 py-4 border-b border-slate-200 flex justify-between items-center">
+                            <h5 class="font-bold text-base text-slate-900"><i class="fa-solid fa-book-open text-violet-600 mr-2"></i> Literasi Digital (Kelas 11)</h5>
+                            <span class="text-xs font-semibold bg-violet-50 text-violet-700 px-3 py-1 rounded-full">10 TP</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <p class="text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                <strong>CP:</strong> Riset mesin pencari, verifikasi konten teks/gambar/video, membaca lateral informasi kompleks, merancang sistem komputer, keamanan lanjut jaringan, hukum isu digital Indonesia, dompet digital & aspek keamanannya.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.1</span>
+                                    <p class="text-sm text-slate-700">Memahami penggunaan mesin pencari untuk melakukan riset.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.2</span>
+                                    <p class="text-sm text-slate-700">Mengevaluasi kebenaran konten menggunakan verifikasi teks, gambar, dan video.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.3</span>
+                                    <p class="text-sm text-slate-700">Menggunakan cara membaca lateral untuk mengevaluasi informasi digital yang kompleks.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.4</span>
+                                    <p class="text-sm text-slate-700">Merancang kebutuhan sistem komputer sesuai kebutuhan pengguna.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.5</span>
+                                    <p class="text-sm text-slate-700">Memahami konsep, penerapan, & konfigurasi keamanan lanjut konektivitas jaringan lokal/internet.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.6</span>
+                                    <p class="text-sm text-slate-700">Mengkreasi konten digital dengan peralatan dan metode yang bervariasi.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.7</span>
+                                    <p class="text-sm text-slate-700">Memahami hukum dan perundang-undangan terkait isu digital di Indonesia.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.8</span>
+                                    <p class="text-sm text-slate-700">Memahami pemanfaatan teknologi digital dalam demokrasi.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.9</span>
+                                    <p class="text-sm text-slate-700">Menerapkan pengelolaan kata sandi dengan manajer kata sandi & 2FA beragam moda.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">2.10</span>
+                                    <p class="text-sm text-slate-700">Memahami pemanfaatan platform loka pasar, perbankan digital, dompet digital beserta keamanannya.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Elemen 3 & 4: Analisis Data & Dasar Algoritma Kelas 11 -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                            <div class="bg-slate-100 px-6 py-4 border-b border-slate-200">
+                                <h5 class="font-bold text-base text-slate-900"><i class="fa-solid fa-database text-emerald-600 mr-2"></i> Analisis Data</h5>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <p class="text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                    <strong>CP:</strong> Memanfaatkan sumber data terbuka, terpercaya, dan legal untuk pengambilan keputusan serta prediksi efektif tanpa/dengan komputer.
+                                </p>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded text-xs mt-0.5">3.1</span>
+                                    <p class="text-sm text-slate-700">Memanfaatkan sumber data terbuka, terpercaya & legal untuk olah data keputusan dan prediksi.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                            <div class="bg-slate-100 px-6 py-4 border-b border-slate-200">
+                                <h5 class="font-bold text-base text-slate-900"><i class="fa-solid fa-code text-amber-600 mr-2"></i> Dasar Algoritma Pemrograman</h5>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <p class="text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                    <strong>CP:</strong> Memahami konsep strategi algoritmik dan pengembangan program terstruktur berdasarkan notasi yang tepat.
+                                </p>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded text-xs mt-0.5">4.1</span>
+                                    <p class="text-sm text-slate-700">Memahami konsep strategi algoritmik secara mendalam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kelas 12 -->
+                <div class="space-y-6 pt-4">
+                    <div class="flex items-center space-x-3 border-b border-slate-200 pb-3">
+                        <span class="bg-violet-600 text-white font-bold text-sm px-3 py-1 rounded-lg">Kelas 12</span>
+                        <h5 class="font-bold text-xl text-slate-900">Algoritma Pemrograman Lanjut <span class="text-xs font-normal text-slate-500 italic">*dipelajari melalui projek kontekstual</span></h5>
+                    </div>
+
+                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+                        <div class="bg-slate-100 px-6 py-4 border-b border-slate-200 flex justify-between items-center">
+                            <h5 class="font-bold text-base text-slate-900"><i class="fa-solid fa-laptop-code text-violet-600 mr-2"></i> Algoritma Pemrograman Lanjut</h5>
+                            <span class="text-xs font-semibold bg-violet-50 text-violet-700 px-3 py-1 rounded-full">4 TP</span>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <p class="text-sm text-slate-700 leading-relaxed bg-slate-50 p-4 rounded-xl border border-slate-100">
+                                <strong>CP:</strong> Mengembangkan program komputer terstruktur berdasarkan strategi algoritmik; pemeliharaan & penyempurnaan algoritma standar ke kode sumber dengan kualitas tinggi; merancang & mengimplementasikan program struktur data kompleks menggunakan library/perangkat tersedia.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">4.2</span>
+                                    <p class="text-sm text-slate-700">Mengembangkan program komputer terstruktur dalam notasi algoritma berdasarkan strategi tepat.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">4.3</span>
+                                    <p class="text-sm text-slate-700">Mengembangkan, memelihara, & menyempurnakan algoritma standar ke dalam kode sumber program.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">4.4</span>
+                                    <p class="text-sm text-slate-700">Merancang dan mengimplementasikan sebuah program yang menggunakan struktur data kompleks.</p>
+                                </div>
+                                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-100 flex items-start space-x-3">
+                                    <span class="font-mono font-bold text-violet-600 bg-violet-50 px-2 py-0.5 rounded text-xs mt-0.5">4.5</span>
+                                    <p class="text-sm text-slate-700">Menggunakan library atau perangkat pendukung pemrograman yang tersedia secara optimal.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontak" class="bg-slate-900 text-slate-300 pt-16 pb-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-12 border-b border-slate-800">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h4 class="font-extrabold text-white text-lg">Informatika SMAN 19</h4>
+                    </div>
+                    <p class="text-sm text-slate-400">
+                        Portal informasi dan materi pembelajaran resmi mata pelajaran Informatika SMAN 19 Pekanbaru, Provinsi Riau. Mendukung Implementasi Kurikulum Merdeka.
+                    </p>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">Tautan Cepat</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#beranda" class="hover:text-indigo-400 transition">Beranda</a></li>
+                        <li><a href="#tentang" class="hover:text-indigo-400 transition">Tentang Mata Pelajaran</a></li>
+                        <li><a href="#atp" class="hover:text-indigo-400 transition">Materi ATP Fase E & F</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="text-white font-bold mb-4">Informasi Kontak & Sekolah</h5>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="flex items-start space-x-3">
+                            <i class="fa-solid fa-location-dot text-indigo-500 mt-1"></i>
+                            <span>Jl. Garuda Sakti, Simpang Baru, Kec. Tampan, Kota Pekanbaru, Riau</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <i class="fa-solid fa-envelope text-indigo-500"></i>
+                            <span>info@sman19pekanbaru.sch.id</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+                <p>&copy; 2026 SMAN 19 Pekanbaru. All rights reserved. Hosted with GitHub Pages.</p>
+                <p class="mt-2 sm:mt-0">Dibuat khusus untuk Pembelajaran Informatika Bermutu.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Tab switching logic for ATP
+        function switchTab(target) {
+            const btnX = document.getElementById('btn-x');
+            const btnXiXii = document.getElementById('btn-xi-xii');
+            const contentX = document.getElementById('content-x');
+            const contentXiXii = document.getElementById('content-xi-xii');
+
+            if (target === 'x') {
+                btnX.className = "px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 bg-white text-indigo-600 shadow-md";
+                btnXiXii.className = "px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900";
+                contentX.classList.remove('hidden');
+                contentXiXii.classList.add('hidden');
+            } else {
+                btnXiXii.className = "px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 bg-white text-indigo-600 shadow-md";
+                btnX.className = "px-6 py-3 rounded-xl font-bold text-sm transition-all duration-200 text-slate-600 hover:text-slate-900";
+                contentXiXii.classList.remove('hidden');
+                contentX.classList.add('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
